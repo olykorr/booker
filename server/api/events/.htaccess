@@ -1,0 +1,10 @@
+<Limit GET POST PUT DELETE>
+    Allow from all
+</Limit>
+
+RewriteEngine On
+RewriteBase /~user16/booker/server/api/events/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ index.php
+DirectoryIndex index.php
